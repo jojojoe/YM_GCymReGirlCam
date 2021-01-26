@@ -12,7 +12,7 @@ target 'GCymReGirlCam' do
   pod 'SwifterSwift'
   pod 'Defaults'
   pod 'NoticeObserveKit'
-  
+  pod 'Adjust'
 #  UI
   pod 'SnapKit'
 
@@ -23,5 +23,8 @@ target 'GCymReGirlCam' do
 #  Store
   pod 'SwiftyStoreKit'
   pod 'TPInAppReceipt'
-
+  
+#  Debug
+  pod 'LookinServer', :configurations => ['Debug']
+  
 end

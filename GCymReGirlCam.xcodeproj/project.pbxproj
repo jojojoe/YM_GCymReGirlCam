@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,20 @@
 		EB0E5EEE25BFB9D200E3F440 /* GCStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5EED25BFB9D200E3F440 /* GCStoreVC.swift */; };
 		EB0E5EF125BFB9EB00E3F440 /* GCEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5EF025BFB9EB00E3F440 /* GCEditVC.swift */; };
 		EB0E5EF425BFB9FE00E3F440 /* GCSaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5EF325BFB9FE00E3F440 /* GCSaveVC.swift */; };
+		EB0E5F3125BFF2FD00E3F440 /* UIKit+Simply.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */; };
+		EB0E5F3225BFF2FD00E3F440 /* HUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */; };
+		EB0E5F3325BFF2FD00E3F440 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */; };
+		EB0E5F3625BFF30F00E3F440 /* VC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */; };
+		EB0E5F3925BFF31800E3F440 /* UIApplication+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */; };
+		EB0E5F4025BFF32200E3F440 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */; };
+		EB0E5F4125BFF32200E3F440 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */; };
+		EB0E5F4225BFF32200E3F440 /* AttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */; };
+		EB0E5F4325BFF32200E3F440 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */; };
+		EB0E5F4425BFF32200E3F440 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3F25BFF32100E3F440 /* Once.swift */; };
+		EB0E5F4825BFF8C400E3F440 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */; };
+		EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5925BFF90B00E3F440 /* Keychain.swift */; };
+		EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */; };
+		EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +52,20 @@
 		EB0E5EED25BFB9D200E3F440 /* GCStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCStoreVC.swift; sourceTree = "<group>"; };
 		EB0E5EF025BFB9EB00E3F440 /* GCEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCEditVC.swift; sourceTree = "<group>"; };
 		EB0E5EF325BFB9FE00E3F440 /* GCSaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSaveVC.swift; sourceTree = "<group>"; };
+		EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Simply.swift"; sourceTree = "<group>"; };
+		EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDExtension.swift; sourceTree = "<group>"; };
+		EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+ImagePicker.swift"; sourceTree = "<group>"; };
+		EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+URL.swift"; sourceTree = "<group>"; };
+		EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extension.swift"; sourceTree = "<group>"; };
+		EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		EB0E5F3F25BFF32100E3F440 /* Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
+		EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		EB0E5F5925BFF90B00E3F440 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
+		EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolSizeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +86,6 @@
 				2FA189808548C2814F36E05B /* Pods-GCymReGirlCam.debug.xcconfig */,
 				E6DB45434D370024FADC48B7 /* Pods-GCymReGirlCam.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +110,9 @@
 		EB0E5EC925BFB28B00E3F440 /* GCymReGirlCam */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E5F2D25BFF2E100E3F440 /* Extension */,
+				EB0E5F5825BFF8FD00E3F440 /* ToolStuff */,
+				EB0E5F4625BFF8AC00E3F440 /* ModelManager */,
 				EB0E5EE125BFB2C100E3F440 /* Main */,
 				EB0E5EDF25BFB2BA00E3F440 /* Root */,
 			);
@@ -111,8 +141,51 @@
 				EB0E5EED25BFB9D200E3F440 /* GCStoreVC.swift */,
 				EB0E5EF025BFB9EB00E3F440 /* GCEditVC.swift */,
 				EB0E5EF325BFB9FE00E3F440 /* GCSaveVC.swift */,
+				EB0E5F5F25C0225E00E3F440 /* ToolView */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EB0E5F2D25BFF2E100E3F440 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */,
+				EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */,
+				EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */,
+				EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */,
+				EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */,
+				EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */,
+				EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */,
+				EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */,
+				EB0E5F3F25BFF32100E3F440 /* Once.swift */,
+				EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */,
+				EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EB0E5F4625BFF8AC00E3F440 /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */,
+			);
+			path = ModelManager;
+			sourceTree = "<group>";
+		};
+		EB0E5F5825BFF8FD00E3F440 /* ToolStuff */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E5F5925BFF90B00E3F440 /* Keychain.swift */,
+			);
+			path = ToolStuff;
+			sourceTree = "<group>";
+		};
+		EB0E5F5F25C0225E00E3F440 /* ToolView */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */,
+			);
+			path = ToolView;
 			sourceTree = "<group>";
 		};
 		FC41200000ACB37B73487FE1 /* Frameworks */ = {
@@ -237,14 +310,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0E5F4025BFF32200E3F440 /* Foundation+Extension.swift in Sources */,
 				EB0E5EEE25BFB9D200E3F440 /* GCStoreVC.swift in Sources */,
+				EB0E5F4425BFF32200E3F440 /* Once.swift in Sources */,
 				EB0E5ECF25BFB28B00E3F440 /* ViewController.swift in Sources */,
+				EB0E5F3125BFF2FD00E3F440 /* UIKit+Simply.swift in Sources */,
+				EB0E5F4225BFF32200E3F440 /* AttributedString+Extension.swift in Sources */,
 				EB0E5EE325BFB2DA00E3F440 /* GCMainVC.swift in Sources */,
 				EB0E5EF425BFB9FE00E3F440 /* GCSaveVC.swift in Sources */,
+				EB0E5F4325BFF32200E3F440 /* String+Crypto.swift in Sources */,
+				EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */,
+				EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */,
+				EB0E5F3225BFF2FD00E3F440 /* HUDExtension.swift in Sources */,
 				EB0E5ECB25BFB28B00E3F440 /* AppDelegate.swift in Sources */,
 				EB0E5EF125BFB9EB00E3F440 /* GCEditVC.swift in Sources */,
+				EB0E5F4125BFF32200E3F440 /* SwiftyTimer.swift in Sources */,
+				EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */,
+				EB0E5F3625BFF30F00E3F440 /* VC+ImagePicker.swift in Sources */,
 				EB0E5EEB25BFB9C800E3F440 /* GCSettingVC.swift in Sources */,
+				EB0E5F3325BFF2FD00E3F440 /* UIKitExtension.swift in Sources */,
 				EB0E5ECD25BFB28B00E3F440 /* SceneDelegate.swift in Sources */,
+				EB0E5F3925BFF31800E3F440 /* UIApplication+URL.swift in Sources */,
+				EB0E5F4825BFF8C400E3F440 /* CoinManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
