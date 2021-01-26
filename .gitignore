@@ -1,0 +1,7 @@
+GCymReGirlCam.xcodeproj/xcuserdata/
+GCymReGirlCam.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+GCymReGirlCam.xcodeproj/project.xcworkspace/xcuserdata/
