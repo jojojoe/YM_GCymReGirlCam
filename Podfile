@@ -13,6 +13,9 @@ target 'GCymReGirlCam' do
   pod 'Defaults'
   pod 'NoticeObserveKit'
   pod 'Adjust'
+  pod 'GPUImage'
+  
+  
 #  UI
   pod 'SnapKit'
 
