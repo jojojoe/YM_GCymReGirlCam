@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   ITFreeContentItemList.plist
-   GCymReGirlCam
-
-   Created by JOJO on 2021/2/1.
-   Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
--->
 <plist version="1.0">
-<dict/>
+<array>
+	<string>overlayer_sele</string>
+	<string>v1_1_t_1girlscamera</string>
+	<string>v1_1_t_2girlscamera</string>
+	<string>gril_cam_sticker_1</string>
+	<string>gril_cam_sticker_2</string>
+	<string>1girlscamera_brush</string>
+	<string>2girlscamera_brush</string>
+</array>
 </plist>

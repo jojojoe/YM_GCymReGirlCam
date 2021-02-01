@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alertift
+
 
 class GCEditVC: UIViewController {
     var contentImage: UIImage
@@ -28,8 +30,25 @@ class GCEditVC: UIViewController {
     let toolStickerBtn: UIButton = UIButton(type: .custom)
     let toolLineBtn: UIButton = UIButton(type: .custom)
     
+    var toolContentViews: [UIView] = []
     let toolSizeView = GCToolSizeView()
+    let toolFilterView = GCToolFilterView()
+    let toolOverlayerBorderView = GCToolBorderView()
+    let toolStickerView = GCStickerView()
+    let toolPainBarView = GCPaintBar()
     
+    
+    var paintContentView : MaskView!
+    
+    var currentUnlockPaintItem: GCPaintItem?
+    
+    //sticker
+    var currentStickerAddonView : GCTouchStickerView?
+    
+    var stickerAddonViewList : [TouchStuffView]? = [TouchStuffView]()
+    var isModify : Bool = false
+    
+    let unlockAlertView: GCUnlockBgView = GCUnlockBgView()
     
     
     init(image: UIImage) {
@@ -103,7 +122,26 @@ extension GCEditVC {
 }
 
 extension GCEditVC {
+    @objc func contentBgBtnClick(sender: UIButton) {
+        deselectCurrentSticker()
+    }
+    
+}
+
+extension GCEditVC {
     func setupCanvasView() {
+        
+        // add content bg btn
+        let contentBgBtn = UIButton(type: .custom)
+        contentBgBtn.backgroundColor = .clear
+        view.addSubview(contentBgBtn)
+        contentBgBtn.snp.makeConstraints {
+            $0.top.equalTo(topBgView.snp.bottom)
+            $0.right.bottom.left.equalToSuperview()
+        }
+        contentBgBtn.addTarget(self, action: #selector(contentBgBtnClick(sender:)), for: .touchUpInside)
+        
+        
         // content bg view
         contentBgView.backgroundColor = .purple
         view.addSubview(contentBgView)
@@ -112,6 +150,7 @@ extension GCEditVC {
             $0.left.right.equalToSuperview()
             $0.height.equalTo(contentBgView.snp.width)
         }
+        
         
         // content image view
         contentImageView.clipsToBounds = true
@@ -122,6 +161,7 @@ extension GCEditVC {
         contentBgView.addSubview(contentImageView)
         
         // overlayer image view
+        overlayerImageView.contentMode = .scaleAspectFit
         overlayerImageView.backgroundColor = .clear
         overlayerImageView.image = nil
         overlayerImageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
@@ -131,6 +171,17 @@ extension GCEditVC {
         stickerBgView.backgroundColor = .clear
         stickerBgView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
         contentBgView.addSubview(stickerBgView)
+        
+        let stickerBgBtn = UIButton(type: .custom)
+        stickerBgBtn.backgroundColor = .clear
+        stickerBgView.addSubview(stickerBgBtn)
+        stickerBgBtn.snp.makeConstraints {
+            $0.top.right.bottom.left.equalToSuperview()
+        }
+        stickerBgBtn.addTarget(self, action: #selector(contentBgBtnClick(sender:)), for: .touchUpInside)
+        
+        // add paint view
+        setupPaintCotnentView()
         
     }
     
@@ -229,13 +280,28 @@ extension GCEditVC {
     }
     
     func setupToolContentView() {
+        setupToolSizeView()
+        setupToolFilter()
+        setupToolOverlayer()
+        setupToolStickerView()
+        setupToolPaintView()
+        
+        updateContentToolView(currentView: toolSizeView)
+        
+        updateContentBgViewColor(color: UIColor(hexString: toolSizeView.colors.first ?? "#FFFFFF") ?? .white)
+    }
+    
+    func setupToolSizeView() {
+        // Tool Size
+        toolContentViews.append(toolSizeView)
+        toolSizeView.slider.value = 0.75
+        updateImageViewTransitionScale(scale: 0.75)
         toolSizeView.sizeValueChangeBlock = {
             [weak self] scale in
             guard let `self` = self else {return}
             
             self.updateImageViewTransitionScale(scale: scale)
         }
-        
         toolSizeView.colorClickBlock = {
             [weak self] colorHex in
             guard let `self` = self else {return}
@@ -249,16 +315,186 @@ extension GCEditVC {
         }
     }
     
+    func setupToolFilter() {
+        // Tool Filter
+        toolContentViews.append(toolFilterView)
+        toolFilterView.didSelectFilterItemBlock = {
+            [weak self] filterItem in
+            guard let `self` = self else {return}
+            if filterItem.filterName == "Original" {
+                self.contentImageView.image = self.contentImage
+            } else {
+                self.contentImageView.image = GCDataManager.default.filterOriginalImage(image: self.contentImage, lookupImgNameStr: filterItem.imageName)
+            }
+        }
+        toolContentView.addSubview(toolFilterView)
+        toolFilterView.snp.makeConstraints {
+            $0.top.equalTo(40)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(-30)
+        }
+        
+    }
+    func setupToolOverlayer() {
+        toolContentViews.append(toolOverlayerBorderView)
+        toolOverlayerBorderView.didSelectStickerItemBlock = {
+            [weak self] overlayerItem in
+            guard let `self` = self else {return}
+            if ITContentPurchasedUnlockManager.sharedInstance().hasUnlockContent(withContentItemId: overlayerItem.thumbnail) {
+                
+            } else {
+                self.showUnlockBgView(currentUnlockId: overlayerItem.thumbnail, type: "border")
+                return
+            }
+            
+            if overlayerItem.contentImageName == "overlayer_sele" {
+                self.overlayerImageView.image = nil
+            } else {
+                self.overlayerImageView.image = UIImage(named: overlayerItem.contentImageName)
+            }
+            
+        }
+        toolContentView.addSubview(toolOverlayerBorderView)
+        toolOverlayerBorderView.snp.makeConstraints {
+            $0.top.equalTo(40)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(-30)
+        }
+    }
+    
+    func setupToolStickerView() {
+        
+        toolContentViews.append(toolStickerView)
+        toolStickerView.didSelectStickerItemBlock = {
+            [weak self] stickerItem in
+            guard let `self` = self else {return}
+            if ITContentPurchasedUnlockManager.sharedInstance().hasUnlockContent(withContentItemId: stickerItem.thumbnail) {
+                
+            } else {
+                self.showUnlockBgView(currentUnlockId: stickerItem.thumbnail, type: "sticker")
+                return
+            }
+            
+            self.creatStickerAddonWithStickerName(stickerName: stickerItem.contentImageName)
+            
+        }
+        toolContentView.addSubview(toolStickerView)
+        toolStickerView.snp.makeConstraints {
+            $0.top.equalTo(40)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(-30)
+        }
+    }
+    
+    func setupToolPaintView() {
+        
+        toolContentViews.append(toolPainBarView)
+        
+        toolPainBarView.didSelectPaintStyleBlock = {[weak self] paintStyleItem in
+            guard let `self` = self else { return }
+            
+            self.currentUnlockPaintItem = paintStyleItem
+            
+            if ITContentPurchasedUnlockManager.sharedInstance().hasUnlockContent(withContentItemId: paintStyleItem.previewImageName) {
+                
+            } else {
+                self.showUnlockBgView(currentUnlockId: paintStyleItem.previewImageName, type: "paint")
+                return
+            }
+            
+            MaskConfigManager.sharedInstance().lineColorOne = UIColor.init(hexString: paintStyleItem.gradualColorOne) ?? UIColor.white
+            MaskConfigManager.sharedInstance().lineColorTwo = UIColor.init(hexString: paintStyleItem.gradualColorTwo) ?? UIColor.white
+            if paintStyleItem.StrokeType == "Normal" {
+                MaskConfigManager.sharedInstance().strokeType = .normal
+            } else {
+                MaskConfigManager.sharedInstance().strokeType = .gradient
+            }
+            self.isModify = true
+        }
+        toolPainBarView.lineWidthStrengthBlock = {[weak self] lineWidthStrength in
+            guard let `self` = self else { return }
+            MaskConfigManager.sharedInstance().lineWidth = CGFloat(lineWidthStrength)
+            self.isModify = true
+        }
+        
+        toolPainBarView.clearAllPathAction = {[weak self] in
+            guard let `self` = self else { return }
+            self.paintContentView.clearPath()
+        }
+         
+        
+        toolContentView.addSubview(toolPainBarView)
+        toolPainBarView.snp.makeConstraints {
+            $0.top.equalTo(40)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(-30)
+        }
+    }
+    
+    func setupPaintCotnentView()  {
+        paintContentView = MaskView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.width))
+        contentBgView.addSubview(paintContentView)
+        paintContentView.perPaintMoveCompletion = {[weak self] canBeforeAction, canNextAction in
+            guard let `self` = self else { return }
+            
+        }
+        showPaintContentView(isInteractionEnabled: false)
+    }
+    
+    func showPaintContentView(isInteractionEnabled:Bool)  {
+        paintContentView.isUserInteractionEnabled = isInteractionEnabled
+        paintContentView.touchView.canEditStatus = isInteractionEnabled
+    }
     
 }
 
+extension GCEditVC {
+    func creatStickerAddonWithStickerName(stickerName:String) {
+        
+        if currentStickerAddonView != nil {
+            currentStickerAddonView?.setHilight(false)
+        }
+        
+        let stickerWidth = UIScreen.width * 1 / 2
+        let stickerAddon: GCTouchStickerView = GCTouchStickerView.init(stickerName: stickerName, withStickerSize: CGSize.init(width: stickerWidth, height: stickerWidth))
+        stickerAddon.delegate = self
+        stickerAddon.center = CGPoint.init(x: self.stickerBgView.width / 2, y: self.stickerBgView.height / 2)
+        stickerBgView.addSubview(stickerAddon)
+        
+        currentStickerAddonView = stickerAddon
+        stickerAddonViewList?.append(stickerAddon)
+        currentStickerAddonView?.setHilight(true)
+        
+        
+    }
+    
+}
 
+extension GCEditVC {
+    func updateContentToolView(currentView: UIView) {
+        for view in toolContentViews {
+            if view == currentView {
+                view.isHidden = false
+            } else {
+                view.isHidden = true
+            }
+        }
+    }
+}
+
+extension GCEditVC {
+    
+}
 
 extension GCEditVC {
     @objc func backBtnClick(sender: UIButton) {
         self.navigationController?.popViewController()
     }
     @objc func saveBtnClick(sender: UIButton) {
+        if let image = contentBgView.screenshot {
+            let saveVC = GCSaveVC(image: image)
+            self.navigationController?.pushViewController(saveVC, animated: true)
+        }
         
     }
 
@@ -270,16 +506,27 @@ extension GCEditVC {
                 btn.isSelected = false
             }
         }
+        
+        deselectCurrentSticker()
+        
+        showPaintContentView(isInteractionEnabled: false)
+        
         if sender == toolSizeBtn {
-            
+            updateContentToolView(currentView: toolSizeView)
         } else if sender == toolFilterBtn {
-            
+            updateContentToolView(currentView: toolFilterView)
         } else if sender == toolBorderBtn {
-            
+            updateContentToolView(currentView: toolOverlayerBorderView)
         } else if sender == toolStickerBtn {
-            
+            updateContentToolView(currentView: toolStickerView)
         } else if sender == toolLineBtn {
+            updateContentToolView(currentView: toolPainBarView)
             
+            showPaintContentView(isInteractionEnabled: true)
+            
+            if toolPainBarView.currentPaintStyleItem == nil {
+                toolPainBarView.didSelectPaintStyleBlock?(GCDataManager.default.paintStyleItemList[0])
+            }
         }
     }
     
@@ -289,6 +536,231 @@ extension GCEditVC {
     
     func updateContentBgViewColor(color: UIColor) {
         contentBgView.backgroundColor = color
+    }
+    
+}
+
+extension GCEditVC {
+    // type  =  sticker  border  paint
+    func showUnlockBgView(currentUnlockId: String, type: String) {
+        if unlockAlertView.superview == nil {
+            view.addSubview(unlockAlertView)
+            unlockAlertView.snp.makeConstraints {
+                $0.top.right.left.bottom.equalToSuperview()
+            }
+            unlockAlertView.alpha = 0
+            
+            
+        }
+        
+        unlockAlertView.cancelBtnClickBlock = {
+            [weak self] in
+            guard let `self` = self else {return}
+            UIView.animate(withDuration: 0.3) {
+                [weak self] in
+                guard let `self` = self else {return}
+                self.unlockAlertView.alpha = 0
+            }
+        }
+        
+        unlockAlertView.okBtnClickBlock = {
+            UIView.animate(withDuration: 0.3) {
+                [weak self] in
+                guard let `self` = self else {return}
+                self.unlockAlertView.alpha = 0
+            }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+                [weak self] in
+                guard let `self` = self else {return}
+                if CoinManager.default.coinCount >= CoinManager.default.coinCostCount {
+                    
+                    ITContentPurchasedUnlockManager.sharedInstance().unlockContentItem(withItemId: currentUnlockId) {
+                        DispatchQueue.main.async {
+                            [weak self] in
+                            guard let `self` = self else {return}
+                            Alertift.alert(title: "Unlock Success", message: "")
+                                .action(.cancel("Ok"))
+                                .show(on: self, completion: nil)
+                            CoinManager.default.costCoin(coin: CoinManager.default.coinCostCount)
+                            if type == "sticker" {
+                                self.toolStickerView.refreshContentCollection()
+                            } else if type == "border" {
+                                self.toolOverlayerBorderView.refreshContentCollection()
+                            } else if type == "paint" {
+                                self.toolPainBarView.refreshContentCollection()
+                                if let currentUnlockPaintItem_m = self.currentUnlockPaintItem  {
+                                    MaskConfigManager.sharedInstance().lineColorOne = UIColor.init(hexString: currentUnlockPaintItem_m.gradualColorOne) ?? UIColor.white
+                                    MaskConfigManager.sharedInstance().lineColorTwo = UIColor.init(hexString: currentUnlockPaintItem_m.gradualColorTwo) ?? UIColor.white
+                                    if currentUnlockPaintItem_m.StrokeType == "Normal" {
+                                        MaskConfigManager.sharedInstance().strokeType = .normal
+                                    } else {
+                                        MaskConfigManager.sharedInstance().strokeType = .gradient
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                } else {
+                    Alertift.alert(title: "金币不足,去商店购买", message: "")
+                        .action(.cancel("Cancel"))
+                        .action(.default("Ok"), handler: {
+                            DispatchQueue.main.async {
+                                [weak self] in
+                                guard let `self` = self else {return}
+                                self.present(GCStoreVC())
+                            }
+                        })
+                        .show(on: self, completion: nil)
+                }
+            }
+        }
+        UIView.animate(withDuration: 0.3) {
+            [weak self] in
+            guard let `self` = self else {return}
+            self.unlockAlertView.alpha = 1
+        }
+        
+        
+    }
+}
+
+
+
+
+extension GCEditVC : TouchStuffViewDelegate {
+
+    func deselectCurrentSticker() {
+        if currentStickerAddonView != nil {
+            currentStickerAddonView?.setHilight(false)
+            currentStickerAddonView = nil
+        }
+    }
+    
+    func viewTouchUp(_ sender: TouchStuffView!) {
+        
+    }
+    
+    func viewTouchMoved(_ sender: TouchStuffView!) {
+        self.isModify = true
+    }
+    
+    func viewSingleClick(_ sender: TouchStuffView!) {
+        
+        if sender.className == "GCTouchStickerView" {
+            if currentStickerAddonView != nil {
+                currentStickerAddonView?.setHilight(false)
+            }
+            
+            currentStickerAddonView = (sender as! GCTouchStickerView)
+            sender.setHilight(true)
+            
+        } else {
+            if currentStickerAddonView != nil {
+                currentStickerAddonView?.setHilight(false)
+                currentStickerAddonView = nil
+            }
+        }
+        
+        
+    }
+    
+    func viewDeleteBtnClick(_ sender: TouchStuffView!) {
+        
+        sender.removeFromSuperview()
+        currentStickerAddonView = nil
+        stickerAddonViewList?.removeAll(sender)
+
+    }
+    
+    
+}
+
+
+
+
+
+
+class GCUnlockBgView: UIView {
+    
+    var cancelBtnClickBlock: (()->Void)?
+    var okBtnClickBlock: (()->Void)?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupView() {
+        backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        let cancelBtn = UIButton(type: .custom)
+        addSubview(cancelBtn)
+        cancelBtn.setTitle("Cancel", for: .normal)
+        cancelBtn.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+        cancelBtn.setTitleColor(.white, for: .normal)
+        cancelBtn.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top)
+            $0.right.equalToSuperview().offset(-23)
+            $0.width.equalTo(60)
+            $0.height.equalTo(40)
+        }
+        cancelBtn.addTarget(self, action: #selector(cancelBtnClick(sender:)), for: .touchUpInside)
+        
+        let contentImageV = UIImageView()
+        contentImageV.contentMode = .center
+        contentImageV.image = UIImage(named: "store_coins_ic")
+        addSubview(contentImageV)
+        contentImageV.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(self.snp.centerY).offset(-60)
+            $0.width.height.equalTo(90)
+        }
+        
+        let titleLabel = UILabel()
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Avenir-BlackOblique", size: 20)
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Cost \(CoinManager.default.coinCostCount) coins"
+        addSubview(titleLabel)
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(contentImageV.snp.bottom).offset(8)
+            $0.width.equalTo(200)
+            $0.height.equalTo(40)
+        }
+        
+        let okBtn = UIButton(type: .custom)
+        addSubview(okBtn)
+        okBtn.setTitle("Ok", for: .normal)
+        okBtn.titleLabel?.font = UIFont(name: "Avenir-Black", size: 16)
+        okBtn.setTitleColor(UIColor(hexString: "#FF3F8F"), for: .normal)
+        okBtn.setBackgroundColor(.white, for: .normal)
+        okBtn.layer.cornerRadius = 12
+        okBtn.layer.masksToBounds = true
+        okBtn.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(164)
+            $0.height.equalTo(40)
+        }
+        okBtn.addTarget(self, action: #selector(okBtnClick(sender:)), for: .touchUpInside)
+        
+    }
+    
+    
+    
+    
+    
+    @objc func cancelBtnClick(sender: UIButton) {
+        cancelBtnClickBlock?()
+    }
+    @objc func okBtnClick(sender: UIButton) {
+        okBtnClickBlock?()
     }
     
 }

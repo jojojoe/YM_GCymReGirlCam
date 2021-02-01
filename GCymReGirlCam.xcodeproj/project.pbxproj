@@ -33,6 +33,26 @@
 		EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5925BFF90B00E3F440 /* Keychain.swift */; };
 		EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */; };
 		EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */; };
+		EBCC98B525C7999F00222ACA /* GCToolFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98B425C7999F00222ACA /* GCToolFilterView.swift */; };
+		EBCC98B925C79A9000222ACA /* GCDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98B825C79A9000222ACA /* GCDataManager.swift */; };
+		EBCC98BC25C79AE700222ACA /* FilterList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC98BB25C79AE700222ACA /* FilterList.plist */; };
+		EBCC98D025C7AB9C00222ACA /* GCToolBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98CF25C7AB9C00222ACA /* GCToolBorderView.swift */; };
+		EBCC98D425C7B2A000222ACA /* OverlayerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC98D325C7B2A000222ACA /* OverlayerList.plist */; };
+		EBCC98DA25C7D6FE00222ACA /* GCStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98D925C7D6FE00222ACA /* GCStickerView.swift */; };
+		EBCC98DE25C7D74500222ACA /* StickerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC98DD25C7D74500222ACA /* StickerList.plist */; };
+		EBCC98F725C7DB0500222ACA /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98E325C7DB0500222ACA /* UIView+Frame.m */; };
+		EBCC98F825C7DB0500222ACA /* UIColor+SSToolkitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98E425C7DB0500222ACA /* UIColor+SSToolkitAdditions.m */; };
+		EBCC98F925C7DB0500222ACA /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98E725C7DB0500222ACA /* MaskView.m */; };
+		EBCC98FA25C7DB0500222ACA /* MaskConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98E825C7DB0500222ACA /* MaskConfigManager.m */; };
+		EBCC98FB25C7DB0500222ACA /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98E925C7DB0500222ACA /* TouchView.m */; };
+		EBCC98FC25C7DB0500222ACA /* GCTouchContentImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98F225C7DB0500222ACA /* GCTouchContentImageView.m */; };
+		EBCC98FD25C7DB0500222ACA /* GCTouchStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98F325C7DB0500222ACA /* GCTouchStickerView.m */; };
+		EBCC98FE25C7DB0500222ACA /* TouchStuffView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98F425C7DB0500222ACA /* TouchStuffView.m */; };
+		EBCC98FF25C7DB0500222ACA /* TouchStuffViewPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98F525C7DB0500222ACA /* TouchStuffViewPrivate.m */; };
+		EBCC990525C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC990425C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m */; };
+		EBCC990B25C7E60300222ACA /* GCPaintBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC990A25C7E60300222ACA /* GCPaintBar.swift */; };
+		EBCC990F25C7E77600222ACA /* GCPaintStyleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC990E25C7E77600222ACA /* GCPaintStyleList.plist */; };
+		EBCC991325C804FD00222ACA /* ITFreeContentItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC991225C804FD00222ACA /* ITFreeContentItemList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +86,37 @@
 		EB0E5F5925BFF90B00E3F440 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
 		EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolSizeView.swift; sourceTree = "<group>"; };
+		EBCC98B425C7999F00222ACA /* GCToolFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolFilterView.swift; sourceTree = "<group>"; };
+		EBCC98B825C79A9000222ACA /* GCDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDataManager.swift; sourceTree = "<group>"; };
+		EBCC98BB25C79AE700222ACA /* FilterList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilterList.plist; sourceTree = "<group>"; };
+		EBCC98CF25C7AB9C00222ACA /* GCToolBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolBorderView.swift; sourceTree = "<group>"; };
+		EBCC98D325C7B2A000222ACA /* OverlayerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OverlayerList.plist; sourceTree = "<group>"; };
+		EBCC98D925C7D6FE00222ACA /* GCStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCStickerView.swift; sourceTree = "<group>"; };
+		EBCC98DD25C7D74500222ACA /* StickerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StickerList.plist; sourceTree = "<group>"; };
+		EBCC98E225C7DB0500222ACA /* UIColor+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SSToolkitAdditions.h"; sourceTree = "<group>"; };
+		EBCC98E325C7DB0500222ACA /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		EBCC98E425C7DB0500222ACA /* UIColor+SSToolkitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SSToolkitAdditions.m"; sourceTree = "<group>"; };
+		EBCC98E525C7DB0500222ACA /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		EBCC98E725C7DB0500222ACA /* MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
+		EBCC98E825C7DB0500222ACA /* MaskConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskConfigManager.m; sourceTree = "<group>"; };
+		EBCC98E925C7DB0500222ACA /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
+		EBCC98EA25C7DB0500222ACA /* MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
+		EBCC98EB25C7DB0500222ACA /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		EBCC98EC25C7DB0500222ACA /* MaskConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskConfigManager.h; sourceTree = "<group>"; };
+		EBCC98EE25C7DB0500222ACA /* GCTouchStickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTouchStickerView.h; sourceTree = "<group>"; };
+		EBCC98EF25C7DB0500222ACA /* GCTouchContentImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTouchContentImageView.h; sourceTree = "<group>"; };
+		EBCC98F025C7DB0500222ACA /* TouchStuffViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchStuffViewPrivate.h; sourceTree = "<group>"; };
+		EBCC98F125C7DB0500222ACA /* TouchStuffView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchStuffView.h; sourceTree = "<group>"; };
+		EBCC98F225C7DB0500222ACA /* GCTouchContentImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTouchContentImageView.m; sourceTree = "<group>"; };
+		EBCC98F325C7DB0500222ACA /* GCTouchStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTouchStickerView.m; sourceTree = "<group>"; };
+		EBCC98F425C7DB0500222ACA /* TouchStuffView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchStuffView.m; sourceTree = "<group>"; };
+		EBCC98F525C7DB0500222ACA /* TouchStuffViewPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchStuffViewPrivate.m; sourceTree = "<group>"; };
+		EBCC990125C7DB4500222ACA /* GCGirlsCamera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCGirlsCamera-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBCC990325C7DBFF00222ACA /* ITContentPurchasedUnlockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITContentPurchasedUnlockManager.h; sourceTree = "<group>"; };
+		EBCC990425C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITContentPurchasedUnlockManager.m; sourceTree = "<group>"; };
+		EBCC990A25C7E60300222ACA /* GCPaintBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPaintBar.swift; sourceTree = "<group>"; };
+		EBCC990E25C7E77600222ACA /* GCPaintStyleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GCPaintStyleList.plist; sourceTree = "<group>"; };
+		EBCC991225C804FD00222ACA /* ITFreeContentItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ITFreeContentItemList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +163,7 @@
 			children = (
 				EB0E5F2D25BFF2E100E3F440 /* Extension */,
 				EB0E5F5825BFF8FD00E3F440 /* ToolStuff */,
+				EBCC98E025C7DB0500222ACA /* OBJ_C_File */,
 				EB0E5F4625BFF8AC00E3F440 /* ModelManager */,
 				EB0E5EE125BFB2C100E3F440 /* Main */,
 				EB0E5EDF25BFB2BA00E3F440 /* Root */,
@@ -128,6 +180,7 @@
 				EB0E5ED025BFB28B00E3F440 /* Main.storyboard */,
 				EB0E5ED325BFB28E00E3F440 /* Assets.xcassets */,
 				EB0E5ED525BFB28E00E3F440 /* LaunchScreen.storyboard */,
+				EBCC990125C7DB4500222ACA /* GCGirlsCamera-Bridging-Header.h */,
 				EB0E5ED825BFB28E00E3F440 /* Info.plist */,
 			);
 			name = Root;
@@ -168,6 +221,12 @@
 			isa = PBXGroup;
 			children = (
 				EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */,
+				EBCC98B825C79A9000222ACA /* GCDataManager.swift */,
+				EBCC98D325C7B2A000222ACA /* OverlayerList.plist */,
+				EBCC98BB25C79AE700222ACA /* FilterList.plist */,
+				EBCC98DD25C7D74500222ACA /* StickerList.plist */,
+				EBCC990E25C7E77600222ACA /* GCPaintStyleList.plist */,
+				EBCC991225C804FD00222ACA /* ITFreeContentItemList.plist */,
 			);
 			path = ModelManager;
 			sourceTree = "<group>";
@@ -183,9 +242,104 @@
 		EB0E5F5F25C0225E00E3F440 /* ToolView */ = {
 			isa = PBXGroup;
 			children = (
-				EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */,
+				EBCC990925C7E5CD00222ACA /* Paint */,
+				EBCC98D825C7D6ED00222ACA /* Sticker */,
+				EBCC98CE25C7AA7A00222ACA /* Border */,
+				EBCC98B325C7997A00222ACA /* Filter */,
+				EBCC98B225C7997200222ACA /* Size */,
 			);
 			path = ToolView;
+			sourceTree = "<group>";
+		};
+		EBCC98B225C7997200222ACA /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		EBCC98B325C7997A00222ACA /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98B425C7999F00222ACA /* GCToolFilterView.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		EBCC98CE25C7AA7A00222ACA /* Border */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98CF25C7AB9C00222ACA /* GCToolBorderView.swift */,
+			);
+			path = Border;
+			sourceTree = "<group>";
+		};
+		EBCC98D825C7D6ED00222ACA /* Sticker */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98D925C7D6FE00222ACA /* GCStickerView.swift */,
+			);
+			path = Sticker;
+			sourceTree = "<group>";
+		};
+		EBCC98E025C7DB0500222ACA /* OBJ_C_File */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC990325C7DBFF00222ACA /* ITContentPurchasedUnlockManager.h */,
+				EBCC990425C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m */,
+				EBCC98E125C7DB0500222ACA /* Category */,
+				EBCC98E625C7DB0500222ACA /* PaintContentView */,
+				EBCC98ED25C7DB0500222ACA /* TouchView */,
+			);
+			path = OBJ_C_File;
+			sourceTree = "<group>";
+		};
+		EBCC98E125C7DB0500222ACA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98E225C7DB0500222ACA /* UIColor+SSToolkitAdditions.h */,
+				EBCC98E325C7DB0500222ACA /* UIView+Frame.m */,
+				EBCC98E425C7DB0500222ACA /* UIColor+SSToolkitAdditions.m */,
+				EBCC98E525C7DB0500222ACA /* UIView+Frame.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EBCC98E625C7DB0500222ACA /* PaintContentView */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98E725C7DB0500222ACA /* MaskView.m */,
+				EBCC98E825C7DB0500222ACA /* MaskConfigManager.m */,
+				EBCC98E925C7DB0500222ACA /* TouchView.m */,
+				EBCC98EA25C7DB0500222ACA /* MaskView.h */,
+				EBCC98EB25C7DB0500222ACA /* TouchView.h */,
+				EBCC98EC25C7DB0500222ACA /* MaskConfigManager.h */,
+			);
+			path = PaintContentView;
+			sourceTree = "<group>";
+		};
+		EBCC98ED25C7DB0500222ACA /* TouchView */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC98EE25C7DB0500222ACA /* GCTouchStickerView.h */,
+				EBCC98EF25C7DB0500222ACA /* GCTouchContentImageView.h */,
+				EBCC98F025C7DB0500222ACA /* TouchStuffViewPrivate.h */,
+				EBCC98F125C7DB0500222ACA /* TouchStuffView.h */,
+				EBCC98F225C7DB0500222ACA /* GCTouchContentImageView.m */,
+				EBCC98F325C7DB0500222ACA /* GCTouchStickerView.m */,
+				EBCC98F425C7DB0500222ACA /* TouchStuffView.m */,
+				EBCC98F525C7DB0500222ACA /* TouchStuffViewPrivate.m */,
+			);
+			path = TouchView;
+			sourceTree = "<group>";
+		};
+		EBCC990925C7E5CD00222ACA /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC990A25C7E60300222ACA /* GCPaintBar.swift */,
+			);
+			path = Paint;
 			sourceTree = "<group>";
 		};
 		FC41200000ACB37B73487FE1 /* Frameworks */ = {
@@ -255,8 +409,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCC98BC25C79AE700222ACA /* FilterList.plist in Resources */,
+				EBCC98D425C7B2A000222ACA /* OverlayerList.plist in Resources */,
+				EBCC991325C804FD00222ACA /* ITFreeContentItemList.plist in Resources */,
 				EB0E5ED725BFB28E00E3F440 /* LaunchScreen.storyboard in Resources */,
 				EB0E5ED425BFB28E00E3F440 /* Assets.xcassets in Resources */,
+				EBCC990F25C7E77600222ACA /* GCPaintStyleList.plist in Resources */,
+				EBCC98DE25C7D74500222ACA /* StickerList.plist in Resources */,
 				EB0E5ED225BFB28B00E3F440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,16 +469,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCC98FD25C7DB0500222ACA /* GCTouchStickerView.m in Sources */,
 				EB0E5F4025BFF32200E3F440 /* Foundation+Extension.swift in Sources */,
 				EB0E5EEE25BFB9D200E3F440 /* GCStoreVC.swift in Sources */,
+				EBCC98DA25C7D6FE00222ACA /* GCStickerView.swift in Sources */,
 				EB0E5F4425BFF32200E3F440 /* Once.swift in Sources */,
 				EB0E5ECF25BFB28B00E3F440 /* ViewController.swift in Sources */,
 				EB0E5F3125BFF2FD00E3F440 /* UIKit+Simply.swift in Sources */,
+				EBCC98B925C79A9000222ACA /* GCDataManager.swift in Sources */,
 				EB0E5F4225BFF32200E3F440 /* AttributedString+Extension.swift in Sources */,
 				EB0E5EE325BFB2DA00E3F440 /* GCMainVC.swift in Sources */,
+				EBCC990525C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m in Sources */,
 				EB0E5EF425BFB9FE00E3F440 /* GCSaveVC.swift in Sources */,
+				EBCC98F825C7DB0500222ACA /* UIColor+SSToolkitAdditions.m in Sources */,
+				EBCC98FB25C7DB0500222ACA /* TouchView.m in Sources */,
 				EB0E5F4325BFF32200E3F440 /* String+Crypto.swift in Sources */,
+				EBCC98D025C7AB9C00222ACA /* GCToolBorderView.swift in Sources */,
+				EBCC990B25C7E60300222ACA /* GCPaintBar.swift in Sources */,
 				EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */,
+				EBCC98FF25C7DB0500222ACA /* TouchStuffViewPrivate.m in Sources */,
 				EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */,
 				EB0E5F3225BFF2FD00E3F440 /* HUDExtension.swift in Sources */,
 				EB0E5ECB25BFB28B00E3F440 /* AppDelegate.swift in Sources */,
@@ -328,10 +496,16 @@
 				EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */,
 				EB0E5F3625BFF30F00E3F440 /* VC+ImagePicker.swift in Sources */,
 				EB0E5EEB25BFB9C800E3F440 /* GCSettingVC.swift in Sources */,
+				EBCC98F725C7DB0500222ACA /* UIView+Frame.m in Sources */,
+				EBCC98FE25C7DB0500222ACA /* TouchStuffView.m in Sources */,
 				EB0E5F3325BFF2FD00E3F440 /* UIKitExtension.swift in Sources */,
+				EBCC98B525C7999F00222ACA /* GCToolFilterView.swift in Sources */,
+				EBCC98FC25C7DB0500222ACA /* GCTouchContentImageView.m in Sources */,
+				EBCC98F925C7DB0500222ACA /* MaskView.m in Sources */,
 				EB0E5ECD25BFB28B00E3F440 /* SceneDelegate.swift in Sources */,
 				EB0E5F3925BFF31800E3F440 /* UIApplication+URL.swift in Sources */,
 				EB0E5F4825BFF8C400E3F440 /* CoinManager.swift in Sources */,
+				EBCC98FA25C7DB0500222ACA /* MaskConfigManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = youmai.GCymReGirlCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCymReGirlCam/GCGirlsCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -510,6 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = youmai.GCymReGirlCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCymReGirlCam/GCGirlsCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

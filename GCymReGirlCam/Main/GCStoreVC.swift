@@ -64,7 +64,7 @@ extension GCStoreVC {
             $0.centerY.equalTo(backBtn)
             $0.right.equalToSuperview().offset(-20)
             $0.height.equalTo(30)
-            $0.width.greaterThanOrEqualTo(50)
+            $0.width.greaterThanOrEqualTo(25)
         }
         
         let coinImageV = UIImageView()
@@ -167,7 +167,11 @@ extension GCStoreVC: UICollectionViewDelegate {
 
 extension GCStoreVC {
     @objc func backBtnClick(sender: UIButton) {
-        self.navigationController?.popViewController()
+        if self.navigationController == nil {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController()
+        }
     }
 }
 
