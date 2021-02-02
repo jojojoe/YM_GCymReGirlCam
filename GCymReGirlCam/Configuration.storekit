@@ -1,0 +1,134 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "D408D6F4",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listone",
+      "referenceName" : "List One",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "6AD8F4DA",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listtwo",
+      "referenceName" : "List Two",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "5.99",
+      "familyShareable" : false,
+      "internalID" : "FFED2EDC",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listthree",
+      "referenceName" : "List Three",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "7F333F36",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listfour",
+      "referenceName" : "List Four",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "12.99",
+      "familyShareable" : false,
+      "internalID" : "AC25F441",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listfive",
+      "referenceName" : "List Five",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "16.99",
+      "familyShareable" : false,
+      "internalID" : "554CA197",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listsix",
+      "referenceName" : "List Six",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "18.99",
+      "familyShareable" : false,
+      "internalID" : "54F73594",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listseven",
+      "referenceName" : "List Seven",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "22.99",
+      "familyShareable" : false,
+      "internalID" : "B3EE5CE7",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.glittergrilmamamogoFast.listeight",
+      "referenceName" : "List Eight",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}

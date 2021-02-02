@@ -7,14 +7,17 @@
 
 import UIKit
 import Adjust
+import SwiftyStoreKit
 
 
 // he /*
 enum AdjustKey: String {
-    case AdjustKeyAppToken = "z9obups5xdkw"
-    case AdjustKeyAppLaunch = "dz4pbn"
-    case AdjustKeyAppCoinsBuy = "nazwhx"
+    case AdjustKeyAppToken = "kbotkgq6cxs0"
+    case AdjustKeyAppLaunch = "mk7gk8"
+    case AdjustKeyAppCoinsBuy = "pkedes"
 }
+// 核里面 AdjustConfig.json 也要填
+// 测试 进 ID com.testbase.www
 // he */
 
 
@@ -44,13 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         initMainVC()
+        SwiftyStoreKit.completeTransactions { (list) in
+            
+        }
+
+        
         // he /*
         Adjust.appDidLaunch(ADJConfig(appToken: AdjustKey.AdjustKeyAppToken.rawValue, environment: ADJEnvironmentProduction))
         Adjust.trackEvent(ADJEvent(eventToken: AdjustKey.AdjustKeyAppLaunch.rawValue))
-//        NotificationCenter.default.post(name: .Pre,
-//                                        object: [
-//                                            HightLigtingHelper.default.debugBundleIdentifier = "com.funnyqrcodemonster",
-//                                            HightLigtingHelper.default.setProductUrl(string: "https://qrcodes.icu/new/")])
+        NotificationCenter.default.post(name: .Pre,
+                                        object: [
+                                            HightLigtingHelper.default.debugBundleIdentifier = "com.testbase.www",
+                                            HightLigtingHelper.default.setProductUrl(string: "https://storyedit.icu/new/")])
         // he */
         
         return true

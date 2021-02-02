@@ -65,8 +65,9 @@ extension GCToolSizeView {
         slider.maximumValue = 1.0
         slider.minimumValue = 0.3
         slider.setThumbImage( UIImage(named: "edit_slide_ic"), for: .normal)
-        slider.minimumTrackTintColor = UIColor.hexString("#FF93B2")
-        slider.maximumTrackTintColor = UIColor.hexString("#FF93B2")
+        
+        slider.minimumTrackTintColor = UIColor(hexString: "#FF93B2")
+        slider.maximumTrackTintColor = UIColor(hexString: "#FF93B2")
         slider.addTarget(self, action: #selector(sliderValueChange(sender:)), for: .valueChanged)
         slider.snp.makeConstraints {
             $0.bottom.equalToSuperview()
@@ -95,7 +96,7 @@ extension GCToolSizeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withClass: GCColorCell.self, for: indexPath)
         let color = colors[indexPath.item]
-        cell.colorView.backgroundColor = UIColor.hexString(color)
+        cell.colorView.backgroundColor = UIColor(hexString: color)
         cell.colorView.layer.masksToBounds = true
         cell.colorView.layer.cornerRadius = 16
         cell.selectView.layer.cornerRadius = 17

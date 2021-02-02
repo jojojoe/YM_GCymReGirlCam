@@ -12,12 +12,12 @@ import Defaults
 import NoticeObserveKit
 
 
-let AppName: String = ""
+let AppName: String = "Magic Girl Cam"
 let purchaseUrl = ""
-let TermsofuseURLStr = ""
-let PrivacyPolicyURLStr = ""
+let TermsofuseURLStr = "http://subsequent-use.surge.sh/Terms_of_use.htm"
+let PrivacyPolicyURLStr = "http://subsequent-use.surge.sh/Privacy_Agreement.htm"
 
-let feedbackEmail: String = ""
+let feedbackEmail: String = "magicgirlcambuild@126.com"
 let AppAppStoreID: String = ""
 
 

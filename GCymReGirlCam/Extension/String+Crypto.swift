@@ -9,14 +9,14 @@ import CommonCrypto
 import SwifterSwift
 import UIKit
 
-public func debugOnly(_ action: () -> Void) {
-    assert(
-        {
-            action()
-            return true
-        }()
-    )
-}
+//public func debugOnly(_ action: () -> Void) {
+//    assert(
+//        {
+//            action()
+//            return true
+//        }()
+//    )
+//}
 
 public protocol URLStringConvertible {
     var url: URL? { get }

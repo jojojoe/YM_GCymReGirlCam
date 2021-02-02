@@ -12,16 +12,70 @@ import Photos
 
 class GCMainVC: UIViewController, UINavigationControllerDelegate {
 
+    let goBtn = UIButton(type: .custom)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // he /*
+        HightLigtingHelper.default.delegate = self
+        // he */
+        
         setupView()
         
     }
     
+ 
+}
+
+extension GCMainVC: HightLigtingHelperDelegate {
+
+    func open(isO: Bool) {
+        
+    }
+    
+    func open() -> UIButton? {
+        let coreButton = UIButton()
+        coreButton.setImage(UIImage(named: "get_li\("ke_btn")"), for: .normal)
+        coreButton.addTarget(self, action: #selector(coreButtonClick(button:)), for: .touchUpInside)
+        self.view.addSubview(coreButton)
+        coreButton.snp.makeConstraints { (make) in
+            make.width.equalTo(300)
+            make.height.equalTo(68)
+            make.bottom.equalTo(goBtn.snp.top).offset(-24)
+            make.centerX.equalTo(self.view)
+        }
+
+        return coreButton
+    }
+    
+    @objc func coreButtonClick(button: UIButton) {
+        HightLigtingHelper.default.present()
+    }
+    
+    func preparePopupKKAd(placeId: String?, placeName: String?) {
+        
+    }
 
     
-
+    func showAd(type: Int, userId: String?, source: String?, complete: @escaping ((Bool, Bool, Bool) -> Void)) {
+        var adType:String = ""
+        switch type {
+        case 0:
+            adType = "KKAd"
+        case 1:
+            adType = "interstitial Ad"
+        case 2:
+            adType = "reward Video Ad"
+        default:
+            break
+        }
+        
+        
+    }
 }
+
+
 
 extension GCMainVC {
     func presentPhotoPickerController() {
@@ -87,7 +141,7 @@ extension GCMainVC {
             $0.height.equalTo(180)
         }
         
-        let goBtn = UIButton(type: .custom)
+        
         goBtn.setImage(UIImage(named: "go_strat_ic"), for: .normal)
         bottomBgView.addSubview(goBtn)
         goBtn.snp.makeConstraints {
@@ -146,24 +200,41 @@ extension GCMainVC {
                         }
                     }
                 case .denied:
-                    let alert = UIAlertController(title: "没有权限获取照片信息", message: "照片权限已被拒绝，请开启权限后再更改照片", preferredStyle: .alert)
-                    let confirmAction = UIAlertAction(title: "去设置", style: .default, handler: { (goSettingAction) in
-                        DispatchQueue.main.async {
-                            let url = URL(string: UIApplication.openSettingsURLString)!
-                            UIApplication.shared.open(url, options: [:])
-                        }
-                    })
-                    let cancelAction = UIAlertAction(title: "取消", style: .cancel)
-                    alert.addAction(confirmAction)
-                    alert.addAction(cancelAction)
-                    self.present(alert, animated: true)
-                case .restricted: let alert = UIAlertController(title: "权限限制", message: "照片的获取被限制了无法获取", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "好的", style: .default)
-                    alert.addAction(okAction)
                     DispatchQueue.main.async {
+                        [weak self] in
+                        guard let `self` = self else {return}
+                        let alert = UIAlertController(title: "Oops", message: "You have declined access to photos, please active it in Settings>Privacy>Photos.", preferredStyle: .alert)
+                        let confirmAction = UIAlertAction(title: "Ok", style: .default, handler: { (goSettingAction) in
+                            DispatchQueue.main.async {
+                                let url = URL(string: UIApplication.openSettingsURLString)!
+                                UIApplication.shared.open(url, options: [:])
+                            }
+                        })
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                        alert.addAction(confirmAction)
+                        alert.addAction(cancelAction)
+                        
                         self.present(alert, animated: true)
                     }
                     
+                case .restricted:
+                    DispatchQueue.main.async {
+                        [weak self] in
+                        guard let `self` = self else {return}
+                        let alert = UIAlertController(title: "Oops", message: "You have declined access to photos, please active it in Settings>Privacy>Photos.", preferredStyle: .alert)
+                        let confirmAction = UIAlertAction(title: "Ok", style: .default, handler: { (goSettingAction) in
+                            DispatchQueue.main.async {
+                                let url = URL(string: UIApplication.openSettingsURLString)!
+                                UIApplication.shared.open(url, options: [:])
+                            }
+                        })
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                        alert.addAction(confirmAction)
+                        alert.addAction(cancelAction)
+                        
+                        
+                        self.present(alert, animated: true)
+                    }
                 default: break
                 }
             }

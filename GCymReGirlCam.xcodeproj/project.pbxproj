@@ -21,18 +21,14 @@
 		EB0E5EF425BFB9FE00E3F440 /* GCSaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5EF325BFB9FE00E3F440 /* GCSaveVC.swift */; };
 		EB0E5F3125BFF2FD00E3F440 /* UIKit+Simply.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */; };
 		EB0E5F3225BFF2FD00E3F440 /* HUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */; };
-		EB0E5F3325BFF2FD00E3F440 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */; };
 		EB0E5F3625BFF30F00E3F440 /* VC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */; };
 		EB0E5F3925BFF31800E3F440 /* UIApplication+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */; };
-		EB0E5F4025BFF32200E3F440 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */; };
-		EB0E5F4125BFF32200E3F440 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */; };
 		EB0E5F4225BFF32200E3F440 /* AttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */; };
-		EB0E5F4325BFF32200E3F440 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */; };
 		EB0E5F4425BFF32200E3F440 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F3F25BFF32100E3F440 /* Once.swift */; };
 		EB0E5F4825BFF8C400E3F440 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */; };
 		EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5925BFF90B00E3F440 /* Keychain.swift */; };
-		EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */; };
 		EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */; };
+		EB6E9DD725C8EA490075EE60 /* WWAlbumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E9DD625C8EA490075EE60 /* WWAlbumHelper.swift */; };
 		EBCC98B525C7999F00222ACA /* GCToolFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98B425C7999F00222ACA /* GCToolFilterView.swift */; };
 		EBCC98B925C79A9000222ACA /* GCDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC98B825C79A9000222ACA /* GCDataManager.swift */; };
 		EBCC98BC25C79AE700222ACA /* FilterList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC98BB25C79AE700222ACA /* FilterList.plist */; };
@@ -53,6 +49,42 @@
 		EBCC990B25C7E60300222ACA /* GCPaintBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC990A25C7E60300222ACA /* GCPaintBar.swift */; };
 		EBCC990F25C7E77600222ACA /* GCPaintStyleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC990E25C7E77600222ACA /* GCPaintStyleList.plist */; };
 		EBCC991325C804FD00222ACA /* ITFreeContentItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCC991225C804FD00222ACA /* ITFreeContentItemList.plist */; };
+		EBCC995825C810BD00222ACA /* InnLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC992F25C810BD00222ACA /* InnLoginHandler.swift */; };
+		EBCC995925C810BD00222ACA /* InnTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993025C810BD00222ACA /* InnTextView.swift */; };
+		EBCC995A25C810BD00222ACA /* InnNativeWebLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993125C810BD00222ACA /* InnNativeWebLoginViewController.swift */; };
+		EBCC995B25C810BD00222ACA /* InnTwoFactorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993225C810BD00222ACA /* InnTwoFactorLoginView.swift */; };
+		EBCC995C25C810BD00222ACA /* VC+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993425C810BD00222ACA /* VC+Route.swift */; };
+		EBCC995D25C810BD00222ACA /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993525C810BD00222ACA /* SwiftyTimer.swift */; };
+		EBCC995E25C810BD00222ACA /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993625C810BD00222ACA /* Foundation+Extension.swift */; };
+		EBCC995F25C810BD00222ACA /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993725C810BD00222ACA /* UIKitExtension.swift */; };
+		EBCC996025C810BD00222ACA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993825C810BD00222ACA /* StringExtension.swift */; };
+		EBCC996125C810BD00222ACA /* InnLoginChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993925C810BD00222ACA /* InnLoginChallengeView.swift */; };
+		EBCC996225C810BD00222ACA /* PublicFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993B25C810BD00222ACA /* PublicFile.swift */; };
+		EBCC996325C810BD00222ACA /* InnRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993D25C810BD00222ACA /* InnRequestHelper.swift */; };
+		EBCC996425C810BD00222ACA /* InnLoginVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC993E25C810BD00222ACA /* InnLoginVerifyCodeView.swift */; };
+		EBCC996525C810BD00222ACA /* ic_a_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994025C810BD00222ACA /* ic_a_c@3x.png */; };
+		EBCC996625C810BD00222ACA /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994125C810BD00222ACA /* login.html */; };
+		EBCC996725C810BD00222ACA /* ic_a_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994225C810BD00222ACA /* ic_a_c@2x.png */; };
+		EBCC996825C810BD00222ACA /* log_in_close_ic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994325C810BD00222ACA /* log_in_close_ic@3x.png */; };
+		EBCC996925C810BD00222ACA /* ic_c_s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994425C810BD00222ACA /* ic_c_s@3x.png */; };
+		EBCC996A25C810BD00222ACA /* ic_c_us@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994525C810BD00222ACA /* ic_c_us@3x.png */; };
+		EBCC996B25C810BD00222ACA /* dialog-main.css in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994625C810BD00222ACA /* dialog-main.css */; };
+		EBCC996C25C810BD00222ACA /* ic_c_us@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994725C810BD00222ACA /* ic_c_us@2x.png */; };
+		EBCC996D25C810BD00222ACA /* ic_c_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994825C810BD00222ACA /* ic_c_s@2x.png */; };
+		EBCC996E25C810BD00222ACA /* log_in_close_ic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994925C810BD00222ACA /* log_in_close_ic@2x.png */; };
+		EBCC996F25C810BD00222ACA /* f000029293.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994A25C810BD00222ACA /* f000029293.png */; };
+		EBCC997025C810BD00222ACA /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994B25C810BD00222ACA /* detail.html */; };
+		EBCC997125C810BD00222ACA /* ic_c_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994C25C810BD00222ACA /* ic_c_c@2x.png */; };
+		EBCC997225C810BD00222ACA /* InnLoginSubviews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994D25C810BD00222ACA /* InnLoginSubviews.xib */; };
+		EBCC997325C810BD00222ACA /* ic_c_c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBCC994E25C810BD00222ACA /* ic_c_c@3x.png */; };
+		EBCC997425C810BD00222ACA /* InnLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC994F25C810BD00222ACA /* InnLoginViewController.swift */; };
+		EBCC997525C810BD00222ACA /* HightLigtingUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995125C810BD00222ACA /* HightLigtingUserManager.swift */; };
+		EBCC997625C810BD00222ACA /* HightLigtingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995225C810BD00222ACA /* HightLigtingHelper.swift */; };
+		EBCC997725C810BD00222ACA /* HightLightingPriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995325C810BD00222ACA /* HightLightingPriceManager.swift */; };
+		EBCC997825C810BD00222ACA /* DataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995425C810BD00222ACA /* DataEncoding.swift */; };
+		EBCC997925C810BD00222ACA /* AdjustConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = EBCC995525C810BD00222ACA /* AdjustConfig.json */; };
+		EBCC997A25C810BD00222ACA /* HighLightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995625C810BD00222ACA /* HighLightingViewController.swift */; };
+		EBCC997B25C810BD00222ACA /* HightLightingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCC995725C810BD00222ACA /* HightLightingExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,18 +106,20 @@
 		EB0E5EF325BFB9FE00E3F440 /* GCSaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSaveVC.swift; sourceTree = "<group>"; };
 		EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Simply.swift"; sourceTree = "<group>"; };
 		EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDExtension.swift; sourceTree = "<group>"; };
-		EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		EB0E5F3025BFF2FD00E3F440 /* UIKitExtensionGC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensionGC.swift; sourceTree = "<group>"; };
 		EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+ImagePicker.swift"; sourceTree = "<group>"; };
 		EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+URL.swift"; sourceTree = "<group>"; };
-		EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
-		EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		EB0E5F3B25BFF31E00E3F440 /* Foundation+GCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+GCExtension.swift"; sourceTree = "<group>"; };
+		EB0E5F3C25BFF31F00E3F440 /* SwiftyTimerGC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimerGC.swift; sourceTree = "<group>"; };
 		EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extension.swift"; sourceTree = "<group>"; };
 		EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
 		EB0E5F3F25BFF32100E3F440 /* Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
 		EB0E5F4725BFF8C400E3F440 /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		EB0E5F5925BFF90B00E3F440 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
+		EB0E5F5C25BFF9F000E3F440 /* VC+GCRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+GCRoute.swift"; sourceTree = "<group>"; };
 		EB0E5F6025C022CB00E3F440 /* GCToolSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolSizeView.swift; sourceTree = "<group>"; };
+		EB6E9DD625C8EA490075EE60 /* WWAlbumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWAlbumHelper.swift; sourceTree = "<group>"; };
+		EB6E9DDA25C8EDC30075EE60 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		EBCC98B425C7999F00222ACA /* GCToolFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCToolFilterView.swift; sourceTree = "<group>"; };
 		EBCC98B825C79A9000222ACA /* GCDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDataManager.swift; sourceTree = "<group>"; };
 		EBCC98BB25C79AE700222ACA /* FilterList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilterList.plist; sourceTree = "<group>"; };
@@ -117,6 +151,42 @@
 		EBCC990A25C7E60300222ACA /* GCPaintBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPaintBar.swift; sourceTree = "<group>"; };
 		EBCC990E25C7E77600222ACA /* GCPaintStyleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GCPaintStyleList.plist; sourceTree = "<group>"; };
 		EBCC991225C804FD00222ACA /* ITFreeContentItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ITFreeContentItemList.plist; sourceTree = "<group>"; };
+		EBCC992F25C810BD00222ACA /* InnLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginHandler.swift; sourceTree = "<group>"; };
+		EBCC993025C810BD00222ACA /* InnTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTextView.swift; sourceTree = "<group>"; };
+		EBCC993125C810BD00222ACA /* InnNativeWebLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnNativeWebLoginViewController.swift; sourceTree = "<group>"; };
+		EBCC993225C810BD00222ACA /* InnTwoFactorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnTwoFactorLoginView.swift; sourceTree = "<group>"; };
+		EBCC993425C810BD00222ACA /* VC+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VC+Route.swift"; sourceTree = "<group>"; };
+		EBCC993525C810BD00222ACA /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		EBCC993625C810BD00222ACA /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		EBCC993725C810BD00222ACA /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		EBCC993825C810BD00222ACA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		EBCC993925C810BD00222ACA /* InnLoginChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginChallengeView.swift; sourceTree = "<group>"; };
+		EBCC993B25C810BD00222ACA /* PublicFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicFile.swift; sourceTree = "<group>"; };
+		EBCC993D25C810BD00222ACA /* InnRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnRequestHelper.swift; sourceTree = "<group>"; };
+		EBCC993E25C810BD00222ACA /* InnLoginVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginVerifyCodeView.swift; sourceTree = "<group>"; };
+		EBCC994025C810BD00222ACA /* ic_a_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@3x.png"; sourceTree = "<group>"; };
+		EBCC994125C810BD00222ACA /* login.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		EBCC994225C810BD00222ACA /* ic_a_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_a_c@2x.png"; sourceTree = "<group>"; };
+		EBCC994325C810BD00222ACA /* log_in_close_ic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@3x.png"; sourceTree = "<group>"; };
+		EBCC994425C810BD00222ACA /* ic_c_s@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@3x.png"; sourceTree = "<group>"; };
+		EBCC994525C810BD00222ACA /* ic_c_us@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@3x.png"; sourceTree = "<group>"; };
+		EBCC994625C810BD00222ACA /* dialog-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "dialog-main.css"; sourceTree = "<group>"; };
+		EBCC994725C810BD00222ACA /* ic_c_us@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_us@2x.png"; sourceTree = "<group>"; };
+		EBCC994825C810BD00222ACA /* ic_c_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_s@2x.png"; sourceTree = "<group>"; };
+		EBCC994925C810BD00222ACA /* log_in_close_ic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log_in_close_ic@2x.png"; sourceTree = "<group>"; };
+		EBCC994A25C810BD00222ACA /* f000029293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f000029293.png; sourceTree = "<group>"; };
+		EBCC994B25C810BD00222ACA /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
+		EBCC994C25C810BD00222ACA /* ic_c_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@2x.png"; sourceTree = "<group>"; };
+		EBCC994D25C810BD00222ACA /* InnLoginSubviews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InnLoginSubviews.xib; sourceTree = "<group>"; };
+		EBCC994E25C810BD00222ACA /* ic_c_c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_c_c@3x.png"; sourceTree = "<group>"; };
+		EBCC994F25C810BD00222ACA /* InnLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnLoginViewController.swift; sourceTree = "<group>"; };
+		EBCC995125C810BD00222ACA /* HightLigtingUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingUserManager.swift; sourceTree = "<group>"; };
+		EBCC995225C810BD00222ACA /* HightLigtingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLigtingHelper.swift; sourceTree = "<group>"; };
+		EBCC995325C810BD00222ACA /* HightLightingPriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingPriceManager.swift; sourceTree = "<group>"; };
+		EBCC995425C810BD00222ACA /* DataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEncoding.swift; sourceTree = "<group>"; };
+		EBCC995525C810BD00222ACA /* AdjustConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdjustConfig.json; sourceTree = "<group>"; };
+		EBCC995625C810BD00222ACA /* HighLightingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLightingViewController.swift; sourceTree = "<group>"; };
+		EBCC995725C810BD00222ACA /* HightLightingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HightLightingExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +231,7 @@
 		EB0E5EC925BFB28B00E3F440 /* GCymReGirlCam */ = {
 			isa = PBXGroup;
 			children = (
+				EBCC992C25C810BD00222ACA /* NiCai */,
 				EB0E5F2D25BFF2E100E3F440 /* Extension */,
 				EB0E5F5825BFF8FD00E3F440 /* ToolStuff */,
 				EBCC98E025C7DB0500222ACA /* OBJ_C_File */,
@@ -182,6 +253,7 @@
 				EB0E5ED525BFB28E00E3F440 /* LaunchScreen.storyboard */,
 				EBCC990125C7DB4500222ACA /* GCGirlsCamera-Bridging-Header.h */,
 				EB0E5ED825BFB28E00E3F440 /* Info.plist */,
+				EB6E9DDA25C8EDC30075EE60 /* Configuration.storekit */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -202,17 +274,17 @@
 		EB0E5F2D25BFF2E100E3F440 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EB0E5F5C25BFF9F000E3F440 /* VC+Route.swift */,
+				EB0E5F5C25BFF9F000E3F440 /* VC+GCRoute.swift */,
 				EB0E5F2F25BFF2FC00E3F440 /* HUDExtension.swift */,
 				EB0E5F2E25BFF2FC00E3F440 /* UIKit+Simply.swift */,
-				EB0E5F3025BFF2FD00E3F440 /* UIKitExtension.swift */,
+				EB0E5F3025BFF2FD00E3F440 /* UIKitExtensionGC.swift */,
 				EB0E5F3525BFF30F00E3F440 /* VC+ImagePicker.swift */,
 				EB0E5F3825BFF31800E3F440 /* UIApplication+URL.swift */,
 				EB0E5F3D25BFF31F00E3F440 /* AttributedString+Extension.swift */,
-				EB0E5F3B25BFF31E00E3F440 /* Foundation+Extension.swift */,
+				EB0E5F3B25BFF31E00E3F440 /* Foundation+GCExtension.swift */,
 				EB0E5F3F25BFF32100E3F440 /* Once.swift */,
 				EB0E5F3E25BFF32000E3F440 /* String+Crypto.swift */,
-				EB0E5F3C25BFF31F00E3F440 /* SwiftyTimer.swift */,
+				EB0E5F3C25BFF31F00E3F440 /* SwiftyTimerGC.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -235,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0E5F5925BFF90B00E3F440 /* Keychain.swift */,
+				EB6E9DD625C8EA490075EE60 /* WWAlbumHelper.swift */,
 			);
 			path = ToolStuff;
 			sourceTree = "<group>";
@@ -342,6 +415,105 @@
 			path = Paint;
 			sourceTree = "<group>";
 		};
+		EBCC992C25C810BD00222ACA /* NiCai */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC992D25C810BD00222ACA /* InnLogin */,
+				EBCC995025C810BD00222ACA /* HighLightingEx */,
+			);
+			path = NiCai;
+			sourceTree = "<group>";
+		};
+		EBCC992D25C810BD00222ACA /* InnLogin */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC992E25C810BD00222ACA /* Handler */,
+				EBCC993025C810BD00222ACA /* InnTextView.swift */,
+				EBCC993125C810BD00222ACA /* InnNativeWebLoginViewController.swift */,
+				EBCC993225C810BD00222ACA /* InnTwoFactorLoginView.swift */,
+				EBCC993325C810BD00222ACA /* Extenison */,
+				EBCC993925C810BD00222ACA /* InnLoginChallengeView.swift */,
+				EBCC993A25C810BD00222ACA /* Public */,
+				EBCC993C25C810BD00222ACA /* Request */,
+				EBCC993E25C810BD00222ACA /* InnLoginVerifyCodeView.swift */,
+				EBCC993F25C810BD00222ACA /* Resource */,
+				EBCC994F25C810BD00222ACA /* InnLoginViewController.swift */,
+			);
+			path = InnLogin;
+			sourceTree = "<group>";
+		};
+		EBCC992E25C810BD00222ACA /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC992F25C810BD00222ACA /* InnLoginHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		EBCC993325C810BD00222ACA /* Extenison */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC993425C810BD00222ACA /* VC+Route.swift */,
+				EBCC993525C810BD00222ACA /* SwiftyTimer.swift */,
+				EBCC993625C810BD00222ACA /* Foundation+Extension.swift */,
+				EBCC993725C810BD00222ACA /* UIKitExtension.swift */,
+				EBCC993825C810BD00222ACA /* StringExtension.swift */,
+			);
+			path = Extenison;
+			sourceTree = "<group>";
+		};
+		EBCC993A25C810BD00222ACA /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC993B25C810BD00222ACA /* PublicFile.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		EBCC993C25C810BD00222ACA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC993D25C810BD00222ACA /* InnRequestHelper.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EBCC993F25C810BD00222ACA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC994025C810BD00222ACA /* ic_a_c@3x.png */,
+				EBCC994125C810BD00222ACA /* login.html */,
+				EBCC994225C810BD00222ACA /* ic_a_c@2x.png */,
+				EBCC994325C810BD00222ACA /* log_in_close_ic@3x.png */,
+				EBCC994425C810BD00222ACA /* ic_c_s@3x.png */,
+				EBCC994525C810BD00222ACA /* ic_c_us@3x.png */,
+				EBCC994625C810BD00222ACA /* dialog-main.css */,
+				EBCC994725C810BD00222ACA /* ic_c_us@2x.png */,
+				EBCC994825C810BD00222ACA /* ic_c_s@2x.png */,
+				EBCC994925C810BD00222ACA /* log_in_close_ic@2x.png */,
+				EBCC994A25C810BD00222ACA /* f000029293.png */,
+				EBCC994B25C810BD00222ACA /* detail.html */,
+				EBCC994C25C810BD00222ACA /* ic_c_c@2x.png */,
+				EBCC994D25C810BD00222ACA /* InnLoginSubviews.xib */,
+				EBCC994E25C810BD00222ACA /* ic_c_c@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EBCC995025C810BD00222ACA /* HighLightingEx */ = {
+			isa = PBXGroup;
+			children = (
+				EBCC995125C810BD00222ACA /* HightLigtingUserManager.swift */,
+				EBCC995225C810BD00222ACA /* HightLigtingHelper.swift */,
+				EBCC995325C810BD00222ACA /* HightLightingPriceManager.swift */,
+				EBCC995425C810BD00222ACA /* DataEncoding.swift */,
+				EBCC995525C810BD00222ACA /* AdjustConfig.json */,
+				EBCC995625C810BD00222ACA /* HighLightingViewController.swift */,
+				EBCC995725C810BD00222ACA /* HightLightingExtension.swift */,
+			);
+			path = HighLightingEx;
+			sourceTree = "<group>";
+		};
 		FC41200000ACB37B73487FE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,14 +581,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCC996C25C810BD00222ACA /* ic_c_us@2x.png in Resources */,
+				EBCC997025C810BD00222ACA /* detail.html in Resources */,
 				EBCC98BC25C79AE700222ACA /* FilterList.plist in Resources */,
+				EBCC996A25C810BD00222ACA /* ic_c_us@3x.png in Resources */,
+				EBCC997125C810BD00222ACA /* ic_c_c@2x.png in Resources */,
+				EBCC997325C810BD00222ACA /* ic_c_c@3x.png in Resources */,
 				EBCC98D425C7B2A000222ACA /* OverlayerList.plist in Resources */,
+				EBCC996625C810BD00222ACA /* login.html in Resources */,
 				EBCC991325C804FD00222ACA /* ITFreeContentItemList.plist in Resources */,
 				EB0E5ED725BFB28E00E3F440 /* LaunchScreen.storyboard in Resources */,
+				EBCC997925C810BD00222ACA /* AdjustConfig.json in Resources */,
 				EB0E5ED425BFB28E00E3F440 /* Assets.xcassets in Resources */,
 				EBCC990F25C7E77600222ACA /* GCPaintStyleList.plist in Resources */,
+				EBCC997225C810BD00222ACA /* InnLoginSubviews.xib in Resources */,
 				EBCC98DE25C7D74500222ACA /* StickerList.plist in Resources */,
+				EBCC996F25C810BD00222ACA /* f000029293.png in Resources */,
+				EBCC996825C810BD00222ACA /* log_in_close_ic@3x.png in Resources */,
+				EBCC996D25C810BD00222ACA /* ic_c_s@2x.png in Resources */,
+				EBCC996725C810BD00222ACA /* ic_a_c@2x.png in Resources */,
+				EBCC996E25C810BD00222ACA /* log_in_close_ic@2x.png in Resources */,
+				EBCC996525C810BD00222ACA /* ic_a_c@3x.png in Resources */,
 				EB0E5ED225BFB28B00E3F440 /* Main.storyboard in Resources */,
+				EBCC996B25C810BD00222ACA /* dialog-main.css in Resources */,
+				EBCC996925C810BD00222ACA /* ic_c_s@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,41 +658,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBCC98FD25C7DB0500222ACA /* GCTouchStickerView.m in Sources */,
-				EB0E5F4025BFF32200E3F440 /* Foundation+Extension.swift in Sources */,
 				EB0E5EEE25BFB9D200E3F440 /* GCStoreVC.swift in Sources */,
 				EBCC98DA25C7D6FE00222ACA /* GCStickerView.swift in Sources */,
+				EBCC996125C810BD00222ACA /* InnLoginChallengeView.swift in Sources */,
 				EB0E5F4425BFF32200E3F440 /* Once.swift in Sources */,
 				EB0E5ECF25BFB28B00E3F440 /* ViewController.swift in Sources */,
+				EBCC997B25C810BD00222ACA /* HightLightingExtension.swift in Sources */,
 				EB0E5F3125BFF2FD00E3F440 /* UIKit+Simply.swift in Sources */,
+				EBCC997725C810BD00222ACA /* HightLightingPriceManager.swift in Sources */,
 				EBCC98B925C79A9000222ACA /* GCDataManager.swift in Sources */,
 				EB0E5F4225BFF32200E3F440 /* AttributedString+Extension.swift in Sources */,
+				EBCC996425C810BD00222ACA /* InnLoginVerifyCodeView.swift in Sources */,
+				EBCC996225C810BD00222ACA /* PublicFile.swift in Sources */,
 				EB0E5EE325BFB2DA00E3F440 /* GCMainVC.swift in Sources */,
+				EB6E9DD725C8EA490075EE60 /* WWAlbumHelper.swift in Sources */,
+				EBCC995C25C810BD00222ACA /* VC+Route.swift in Sources */,
 				EBCC990525C7DBFF00222ACA /* ITContentPurchasedUnlockManager.m in Sources */,
+				EBCC995E25C810BD00222ACA /* Foundation+Extension.swift in Sources */,
 				EB0E5EF425BFB9FE00E3F440 /* GCSaveVC.swift in Sources */,
 				EBCC98F825C7DB0500222ACA /* UIColor+SSToolkitAdditions.m in Sources */,
 				EBCC98FB25C7DB0500222ACA /* TouchView.m in Sources */,
-				EB0E5F4325BFF32200E3F440 /* String+Crypto.swift in Sources */,
 				EBCC98D025C7AB9C00222ACA /* GCToolBorderView.swift in Sources */,
+				EBCC995F25C810BD00222ACA /* UIKitExtension.swift in Sources */,
+				EBCC995D25C810BD00222ACA /* SwiftyTimer.swift in Sources */,
 				EBCC990B25C7E60300222ACA /* GCPaintBar.swift in Sources */,
 				EB0E5F5A25BFF90B00E3F440 /* Keychain.swift in Sources */,
 				EBCC98FF25C7DB0500222ACA /* TouchStuffViewPrivate.m in Sources */,
-				EB0E5F5D25BFF9F000E3F440 /* VC+Route.swift in Sources */,
 				EB0E5F3225BFF2FD00E3F440 /* HUDExtension.swift in Sources */,
 				EB0E5ECB25BFB28B00E3F440 /* AppDelegate.swift in Sources */,
 				EB0E5EF125BFB9EB00E3F440 /* GCEditVC.swift in Sources */,
-				EB0E5F4125BFF32200E3F440 /* SwiftyTimer.swift in Sources */,
 				EB0E5F6125C022CB00E3F440 /* GCToolSizeView.swift in Sources */,
 				EB0E5F3625BFF30F00E3F440 /* VC+ImagePicker.swift in Sources */,
+				EBCC995A25C810BD00222ACA /* InnNativeWebLoginViewController.swift in Sources */,
+				EBCC995825C810BD00222ACA /* InnLoginHandler.swift in Sources */,
 				EB0E5EEB25BFB9C800E3F440 /* GCSettingVC.swift in Sources */,
 				EBCC98F725C7DB0500222ACA /* UIView+Frame.m in Sources */,
 				EBCC98FE25C7DB0500222ACA /* TouchStuffView.m in Sources */,
-				EB0E5F3325BFF2FD00E3F440 /* UIKitExtension.swift in Sources */,
+				EBCC997A25C810BD00222ACA /* HighLightingViewController.swift in Sources */,
 				EBCC98B525C7999F00222ACA /* GCToolFilterView.swift in Sources */,
+				EBCC997525C810BD00222ACA /* HightLigtingUserManager.swift in Sources */,
+				EBCC997425C810BD00222ACA /* InnLoginViewController.swift in Sources */,
+				EBCC997825C810BD00222ACA /* DataEncoding.swift in Sources */,
 				EBCC98FC25C7DB0500222ACA /* GCTouchContentImageView.m in Sources */,
 				EBCC98F925C7DB0500222ACA /* MaskView.m in Sources */,
 				EB0E5ECD25BFB28B00E3F440 /* SceneDelegate.swift in Sources */,
+				EBCC997625C810BD00222ACA /* HightLigtingHelper.swift in Sources */,
+				EBCC996325C810BD00222ACA /* InnRequestHelper.swift in Sources */,
 				EB0E5F3925BFF31800E3F440 /* UIApplication+URL.swift in Sources */,
+				EBCC995B25C810BD00222ACA /* InnTwoFactorLoginView.swift in Sources */,
 				EB0E5F4825BFF8C400E3F440 /* CoinManager.swift in Sources */,
+				EBCC995925C810BD00222ACA /* InnTextView.swift in Sources */,
+				EBCC996025C810BD00222ACA /* StringExtension.swift in Sources */,
 				EBCC98FA25C7DB0500222ACA /* MaskConfigManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,13 +859,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = 598UKLP25U;
 				INFOPLIST_FILE = GCymReGirlCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = youmai.GCymReGirlCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinyu.test.888888;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GCymReGirlCam/GCGirlsCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -683,7 +888,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = youmai.GCymReGirlCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glittergrilmamamogoFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GCymReGirlCam/GCGirlsCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

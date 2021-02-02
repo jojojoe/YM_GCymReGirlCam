@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Magic Girl Cam</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>App needs your camera permission to take photo and edit it shape, background, add stickers and other effect.</string>
+	<string>App needs your camera permission to take photo and edit it shape, filter, background, add stickers, text and other effect.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>App needs your photo gallery permission to choose photo and edit it shape, background, add stickers and other effect.</string>
+	<string>App needs your photo gallery permission to choose and save photo and edit it shape, filter, background, add stickers, text and other effect.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App needs your photo gallery permission to choose and save photo and edit it shape, background, add stickers and other effect.</string>
+	<string>App needs your photo gallery permission to choose photo and edit it shape, filter, background, add stickers, text and other effect.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

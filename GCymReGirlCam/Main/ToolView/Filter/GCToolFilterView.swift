@@ -69,10 +69,16 @@ extension GCToolFilterView: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withClass: GCFilterCell.self, for: indexPath)
         let item = GCDataManager.default.filterList[indexPath.item]
-        cell.contentImageView.image = UIImage.named("\(item.filterName)")
+        let image_o = UIImage(named: "filter_o")
+        let filteredImg = GCDataManager.default.filterOriginalImage(image: image_o!, lookupImgNameStr: item.imageName)
+        if item.filterName == "Original" {
+            cell.contentImageView.image = image_o
+        } else {
+            cell.contentImageView.image = filteredImg //UIImage.named("\(item.filterName)")
+        }
         
         cell.contentImageView.layer.masksToBounds = true
-        cell.contentImageView.layer.cornerRadius = 50
+        cell.contentImageView.layer.cornerRadius = 49
         cell.selectView.layer.cornerRadius = 50
         if currentSelectIndexPath?.item == indexPath.item {
             cell.selectView.isHidden = false

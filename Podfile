@@ -30,4 +30,28 @@ target 'GCymReGirlCam' do
 #  Debug
   pod 'LookinServer', :configurations => ['Debug']
   
+  
+  
+  # cor
+    pod 'SwifterSwift'
+    pod 'AFNetworking'
+    pod 'SVProgressHUD'
+    pod 'Adjust'
+    
+    pod 'FireAdverting', '~> 0.1.10'
+    
+    pod 'Alamofire'
+    pod 'ZKProgressHUD'
+    pod 'Toast'
+    pod 'CryptoSwift'
+    pod 'DeviceKit'
+    pod 'SwiftyStoreKit'
+    pod 'Defaults'
+    pod 'Alertift'
+    pod 'SwiftyJSON'
+    pod 'RxRelay'
+    pod 'SnapKit'
+    pod 'RxCocoa'
+    
+    
 end

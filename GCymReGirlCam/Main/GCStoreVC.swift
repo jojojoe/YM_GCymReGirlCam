@@ -57,7 +57,8 @@ extension GCStoreVC {
         
         topCoinLabel.textAlignment = .right
         topCoinLabel.text = "\(CoinManager.default.coinCount)"
-        topCoinLabel.textColor = UIColor.hexString("#FF8AB3")
+        
+        topCoinLabel.textColor = UIColor(hexString: "#FF8AB3")
         topCoinLabel.font = UIFont(name: "Avenir-BlackOblique", size: 14)
         view.addSubview(topCoinLabel)
         topCoinLabel.snp.makeConstraints {
@@ -104,9 +105,9 @@ extension GCStoreVC {
             
             if success {
                 CoinManager.default.addCoin(coin: item.coin)
-                self.showAlert(title: "Success", message: "")
+                self.showAlert(title: "Purchase successful.", message: "")
             } else {
-                self.showAlert(title: "Failed", message: errorString)
+                self.showAlert(title: "Purchase failed.", message: errorString)
             }
         }
     }
@@ -138,15 +139,15 @@ extension GCStoreVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 27, bottom: 20, right: 27)
+        return UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 24
+        return 14
     }
     
 }
@@ -237,8 +238,8 @@ class GCStoreCell: UICollectionViewCell {
             $0.right.equalToSuperview().offset(-15)
             $0.height.equalTo(30)
         }
-          
-        priceLabel.textColor = UIColor.hexString("#FF3F8F")
+        
+        priceLabel.textColor = UIColor(hexString: "#FF3F8F")
         priceLabel.font = UIFont(name: "Avenir-Black", size: 16)
         priceLabel.textAlignment = .center
         bgView.addSubview(priceLabel)

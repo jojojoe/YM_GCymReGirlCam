@@ -7,7 +7,7 @@
 
 import UIKit
 import Alertift
-
+import SwifterSwift
 
 class GCEditVC: UIViewController {
     var contentImage: UIImage
@@ -102,7 +102,8 @@ extension GCEditVC {
         let saveBtn = UIButton(type: .custom)
         topBgView.addSubview(saveBtn)
         saveBtn.layer.cornerRadius = 8
-        saveBtn.backgroundColor = UIColor.hexString("#FF93B2")
+        
+        saveBtn.backgroundColor = UIColor(hexString: "#FF93B2")
         saveBtn.setTitle("Save", for: .normal)
         saveBtn.titleLabel?.font = UIFont(name: "Avenir-Black", size: 14)
         saveBtn.titleColor(.white)
@@ -301,11 +302,13 @@ extension GCEditVC {
             guard let `self` = self else {return}
             
             self.updateImageViewTransitionScale(scale: scale)
+            self.isModify = true
         }
         toolSizeView.colorClickBlock = {
             [weak self] colorHex in
             guard let `self` = self else {return}
             self.updateContentBgViewColor(color: UIColor(hexString: colorHex) ?? .white)
+            self.isModify = true
         }
         toolContentView.addSubview(toolSizeView)
         toolSizeView.snp.makeConstraints {
@@ -325,6 +328,7 @@ extension GCEditVC {
                 self.contentImageView.image = self.contentImage
             } else {
                 self.contentImageView.image = GCDataManager.default.filterOriginalImage(image: self.contentImage, lookupImgNameStr: filterItem.imageName)
+                self.isModify = true
             }
         }
         toolContentView.addSubview(toolFilterView)
@@ -351,6 +355,7 @@ extension GCEditVC {
                 self.overlayerImageView.image = nil
             } else {
                 self.overlayerImageView.image = UIImage(named: overlayerItem.contentImageName)
+                self.isModify = true
             }
             
         }
@@ -376,7 +381,7 @@ extension GCEditVC {
             }
             
             self.creatStickerAddonWithStickerName(stickerName: stickerItem.contentImageName)
-            
+            self.isModify = true
         }
         toolContentView.addSubview(toolStickerView)
         toolStickerView.snp.makeConstraints {
@@ -420,6 +425,7 @@ extension GCEditVC {
         toolPainBarView.clearAllPathAction = {[weak self] in
             guard let `self` = self else { return }
             self.paintContentView.clearPath()
+            self.isModify = true
         }
          
         
@@ -436,7 +442,7 @@ extension GCEditVC {
         contentBgView.addSubview(paintContentView)
         paintContentView.perPaintMoveCompletion = {[weak self] canBeforeAction, canNextAction in
             guard let `self` = self else { return }
-            
+            self.isModify = true
         }
         showPaintContentView(isInteractionEnabled: false)
     }
@@ -466,6 +472,7 @@ extension GCEditVC {
         currentStickerAddonView?.setHilight(true)
         
         
+        
     }
     
 }
@@ -488,9 +495,28 @@ extension GCEditVC {
 
 extension GCEditVC {
     @objc func backBtnClick(sender: UIButton) {
-        self.navigationController?.popViewController()
+        
+        if isModify == true {
+            Alertift.alert(title: "Are you sure you want to exit, your operation will not be saved.", message: "")
+                .action(.cancel("Cancel"))
+                .action(.default("Ok"), handler: {
+                    DispatchQueue.main.async {
+                        [weak self] in
+                        guard let `self` = self else {return}
+                        self.navigationController?.popViewController()
+                    }
+                })
+                .show(on: self, completion: nil)
+            
+        } else {
+            self.navigationController?.popViewController()
+        }
+        
+        
     }
     @objc func saveBtnClick(sender: UIButton) {
+        deselectCurrentSticker()
+        
         if let image = contentBgView.screenshot {
             let saveVC = GCSaveVC(image: image)
             self.navigationController?.pushViewController(saveVC, animated: true)
@@ -578,7 +604,7 @@ extension GCEditVC {
                         DispatchQueue.main.async {
                             [weak self] in
                             guard let `self` = self else {return}
-                            Alertift.alert(title: "Unlock Success", message: "")
+                            Alertift.alert(title: "Unlock successfully", message: "")
                                 .action(.cancel("Ok"))
                                 .show(on: self, completion: nil)
                             CoinManager.default.costCoin(coin: CoinManager.default.coinCostCount)
@@ -602,7 +628,7 @@ extension GCEditVC {
                     }
                     
                 } else {
-                    Alertift.alert(title: "金币不足,去商店购买", message: "")
+                    Alertift.alert(title: "Diamonds not enough, click and jump to store page.", message: "")
                         .action(.cancel("Cancel"))
                         .action(.default("Ok"), handler: {
                             DispatchQueue.main.async {
@@ -725,13 +751,15 @@ class GCUnlockBgView: UIView {
         titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "Avenir-BlackOblique", size: 20)
         titleLabel.textAlignment = .center
-        titleLabel.text = "Cost \(CoinManager.default.coinCostCount) coins"
+        
+        titleLabel.text = "Unlock need cost \(CoinManager.default.coinCostCount) Diamonds."
         addSubview(titleLabel)
+        titleLabel.numberOfLines = 2
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(contentImageV.snp.bottom).offset(8)
-            $0.width.equalTo(200)
-            $0.height.equalTo(40)
+            $0.width.equalTo(240)
+            $0.height.equalTo(80)
         }
         
         let okBtn = UIButton(type: .custom)
