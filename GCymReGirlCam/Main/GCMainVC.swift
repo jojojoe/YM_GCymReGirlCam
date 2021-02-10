@@ -31,7 +31,7 @@ class GCMainVC: UIViewController, UINavigationControllerDelegate {
 extension GCMainVC: HightLigtingHelperDelegate {
 
     func open(isO: Bool) {
-        
+        debugPrint("isOpen = \(isO)")
     }
     
     func open() -> UIButton? {

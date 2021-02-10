@@ -8,6 +8,7 @@
 import UIKit
 import Alertift
 import SwifterSwift
+import Toast
 
 class GCEditVC: UIViewController {
     var contentImage: UIImage
@@ -518,10 +519,16 @@ extension GCEditVC {
         deselectCurrentSticker()
         
         if let image = contentBgView.screenshot {
-            let saveVC = GCSaveVC(image: image)
-            self.navigationController?.pushViewController(saveVC, animated: true)
+            
+            self.savePhoto(image: image)
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                [weak self] in
+                guard let `self` = self else {return}
+                let saveVC = GCSaveVC(image: image)
+                self.navigationController?.pushViewController(saveVC, animated: true)
+            }
         }
-        
     }
 
     @objc func toolBtnClick(sender: UIButton) {
@@ -652,7 +659,29 @@ extension GCEditVC {
 }
 
 
-
+extension GCEditVC {
+    
+    func savePhoto(image: UIImage) {
+       if let imageData = image.pngData() {
+           WWAlbumHelper.default.savePhoto(imageData) { (success, error) in
+               DispatchQueue.main.async {
+                   [weak self] in
+                   guard let `self` = self else {return}
+                   if success {
+                       self.view.makeToast("Photo storage successful.", duration: 2, position: CSToastPositionCenter)
+                       
+                   } else {
+                       self.view.makeToast("Photo storage failure.", duration: 2, position: CSToastPositionCenter)
+                       
+                   }
+               }
+               
+           }
+       }
+       
+       
+   }
+}
 
 extension GCEditVC : TouchStuffViewDelegate {
 

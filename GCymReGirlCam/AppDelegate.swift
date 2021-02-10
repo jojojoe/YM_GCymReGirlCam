@@ -42,14 +42,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         #endif
+        
+        SwiftyStoreKit.completeTransactions { (list) in
+            
+        }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         initMainVC()
-        SwiftyStoreKit.completeTransactions { (list) in
-            
-        }
+        
 
         
         // he /*
@@ -57,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Adjust.trackEvent(ADJEvent(eventToken: AdjustKey.AdjustKeyAppLaunch.rawValue))
         NotificationCenter.default.post(name: .Pre,
                                         object: [
-                                            HightLigtingHelper.default.debugBundleIdentifier = "com.testbase.www",
+                                            HightLigtingHelper.default.debugBundleIdentifier = "com.glittergrilmamamogoFast",
                                             HightLigtingHelper.default.setProductUrl(string: "https://storyedit.icu/new/")])
         // he */
         

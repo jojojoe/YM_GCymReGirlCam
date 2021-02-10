@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Toast
+
 class GCSaveVC: UIViewController {
     let topBgView = UIView()
     
@@ -24,33 +24,9 @@ class GCSaveVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupView()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-            [weak self] in
-            guard let `self` = self else {return}
-            self.savePhoto()
-        }
+        
     }
      
-    func savePhoto() {
-        if let imageData = contentImage.pngData() {
-            WWAlbumHelper.default.savePhoto(imageData) { (success, error) in
-                DispatchQueue.main.async {
-                    [weak self] in
-                    guard let `self` = self else {return}
-                    if success {
-                        self.view.makeToast("Photo storage successful.", duration: 2, position: CSToastPositionCenter)
-                        
-                    } else {
-                        self.view.makeToast("Photo storage failure.", duration: 2, position: CSToastPositionCenter)
-                        
-                    }
-                }
-                
-            }
-        }
-        
-        
-    }
 
 }
 
